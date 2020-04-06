@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ec_2020_app">
+    package="com.culmyca.ec_2020_app">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/culmyca"
+        android:roundIcon="@mipmap/ic_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sign_up"></activity>
-        <activity android:name=".login" />
-        <activity android:name=".Splash_screen">
+        <activity
+            android:name="com.culmyca.ec_2020_app.EventActivity"
+            android:label="@string/title_activity_event"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.culmyca.ec_2020_app.Login.login" />
+        <activity android:name="com.culmyca.ec_2020_app.about"/>
+        <activity android:name="com.culmyca.ec_2020_app.nav_draw"/>
+
+        <activity android:name="com.culmyca.ec_2020_app.homepage">
+
+        </activity>
+        <activity android:name="com.culmyca.ec_2020_app.story.stories_main" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.culmyca.ec_2020_app.Splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name="com.culmyca.ec_2020_app.MainActivity" >
 
         </activity>
     </application>
